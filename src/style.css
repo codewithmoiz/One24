@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'tobias';
+    src: url(../Assets/Fonts/Tobias-Light.woff2);
+}
+@font-face {
+    font-family: 'untitled';
+    src: url(../Assets/Fonts/UntitledSansWeb-Regular.woff2);
+}
+
+
+:root{
+    --box-width: 1300px;
+    --full-width: 100%;
+
+    --primary-font: 'tobias';
+    --secondary-font: 'untitled';
+}
+
+@media (max-width: 1024px){
+    :root{
+        --box-width: 100%;
+    }
+}
+.tobias{
+    font-family: var(--primary-font);
+}
+.untitled{
+    font-family: var(--secondary-font);
+}
+.montserrat{
+    font-family: "Montserrat";
+}
+
+header a .nav-ball{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+header a:hover .nav-ball{
+    transform: translateX(0%);
+    opacity: 1;
+}
+header a.active .nav-ball{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.hero-section-1{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Assets/Media/hero-section-1-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.hero-1-bottom-right button{
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+.hero-1-bottom-right button::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+.hero-1-bottom-right button span{
+    position: relative;
+    z-index: 5;
+}
+.hero-1-bottom-right button:hover{
+    color: #120902;
+}
+.hero-1-bottom-right button:hover::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hero-2-marquee h1{
+    transform: rotate(-90deg);
+}
+
+
+footer{
+    background: url(../Assets/Media/footer-bg.webp);
+    background-size: cover;
+    background-position: center;
+}
+footer .footer-top button{
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+footer .footer-top button::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+footer .footer-top button:hover::after{
+    transform: translate(-50%, -50%) scale(1)
+}
+footer .footer-top button:hover{
+    color: #120902;
+}
+
+@media (max-width: 1024px){
+    .hero-2-marquee h1{
+        transform: rotate(0deg);
+    }
+}
