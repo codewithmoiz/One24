@@ -13,9 +13,9 @@
 </head>
 <body>
     
-    <div class="cursor w-[10px] h-[10px] rounded-full bg-white pointer-events-none z-[99] -translate-[100%] fixed top-0 left-0"></div>
+    <div class="cursor w-[10px] h-[10px] lg:block hidden rounded-full bg-white pointer-events-none z-[99] -translate-[100%] fixed top-0 left-0"></div>
 
-    <header class="w-[var(--box-width)] py-[32px] flex items-center justify-end gap-[95px] fixed top-0 left-[50%] -translate-x-[50%] z-10 mx-auto lg:px-0 px-[10px]">
+    <!-- <header class="w-[var(--box-width)] py-[32px] flex items-center justify-end gap-[95px] fixed top-0 left-[50%] -translate-x-[50%] z-10 mx-auto lg:px-0 px-[10px]">
         <nav class="hidden lg:flex items-center justify-center gap-[50px] w-[60%]">
             <a href="#" class="active untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
                 <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
@@ -52,12 +52,100 @@
                 Inquire
             </a>
         </div>
-    </header>
+    </header> -->
 
     <div class="main-container w-full h-[650vh] relative">
-        <div class="hero-sections-container w-full h-screen flex sticky top-0 overflow-x-hidden">
+        
+        <header class="w-[var(--box-width)] py-[32px] lg:flex hidden items-center justify-end gap-[95px] sticky top-0  z-10 mx-auto lg:px-0 px-[10px]">
+            <nav class="hidden lg:flex items-center justify-center gap-[50px] w-[60%]">
+                <a href="#" class="active untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    Home
+                </a>
+                <a href="#" class="untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    Vision
+                </a>
+                <a href="#" class="untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    Apartments
+                </a>
+                <a href="#" class="untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    The Island
+                </a>
+                <a href="#" class="untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    Location
+                </a>
+                <a href="#" class="untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    Availability
+                </a>
+            </nav>
+            <div class="nav-buttons flex items-center justify-end gap-[20px] w-[15%]">
+                <a href="#" class="untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    PT
+                </a>
+                <a href="#" class="untitled text-white text-[11px] font-normal leading-[1em] uppercase flex items-center gap-[10px]">
+                    <div class="nav-ball w-[7.875px] h-[7.875px] bg-white rounded-full"></div>
+                    Inquire
+                </a>
+            </div>
+        </header>
+        <!-- Hamburger Button (Mobile Only) -->
+        <div class="w-full flex lg:hidden justify-end px-[10px] py-[20px] sticky top-0 z-[9]">
+    <div class="logo lg:w-[unset] md:w-[80px] w-[70px] absolute top-0 left-[3%]">
+        <svg class="lg:w-[unset] lg:h-[unset] w-full h-full" xmlns="http://www.w3.org/2000/svg" width="96" height="123" viewBox="0 0 96 123" fill="none"><script xmlns=""/>
+        <rect width="96" height="123" fill="#D7CCAE"/>
+        <rect x="4.77502" width="86.1" height="123" fill="#77593D"/>
+        <path d="M26.1099 18.4502H25.1667C22.0012 18.4502 18.9654 19.7077 16.727 21.946C14.4887 24.1844 13.2312 27.2202 13.2312 30.3857C13.2312 33.5513 14.4886 36.5873 16.7269 38.8259C18.9652 41.0645 22.001 42.3223 25.1667 42.3228H26.1099C29.2755 42.3223 32.3113 41.0645 34.5496 38.8259C36.7879 36.5873 38.0454 33.5513 38.0454 30.3857C38.0454 27.2202 36.7879 24.1844 34.5495 21.946C32.3112 19.7077 29.2754 18.4502 26.1099 18.4502ZM32.121 30.9979C32.1212 31.8325 31.9569 32.6589 31.6375 33.43C31.318 34.201 30.8498 34.9015 30.2594 35.4914C29.669 36.0814 28.9681 36.5491 28.1969 36.868C27.4256 37.1868 26.599 37.3505 25.7644 37.3496H25.5073C23.8227 37.3496 22.2071 36.6804 21.0159 35.4893C19.8248 34.2981 19.1556 32.6825 19.1556 30.9979V29.7751C19.1577 28.0919 19.8278 26.4783 21.0188 25.2889C22.2097 24.0994 23.8241 23.4313 25.5073 23.4313H25.7644C26.5985 23.4313 27.4243 23.5957 28.1949 23.9149C28.9654 24.2341 29.6655 24.702 30.2552 25.2918C30.8449 25.8817 31.3126 26.5819 31.6317 27.3525C31.9507 28.1231 32.1148 28.9491 32.1146 29.7831L32.121 30.9979Z" fill="#D7CCAE"/>
+        <path d="M57.1121 19.0352V34.0541L47.8151 19.0352H41.6818V41.7685H46.8703V26.8009L56.1223 41.7685H62.299V19.0352H57.1121Z" fill="#D7CCAE"/>
+        <path d="M71.8593 37.1232V32.3172H81.2448V27.9578H71.8593V23.6789H81.8393V19.0352H66.5858V41.7685H82.4146V37.1232H71.8593Z" fill="#D7CCAE"/>
+        <path d="M27.246 81.8551H43.7465V90.1543H14.5875V82.1459C14.5875 82.1459 25.9252 72.039 30.7971 67.5833C35.669 63.1275 34.0911 56.7983 28.7307 56.7983C23.3704 56.7983 22.9189 62.9331 22.9189 62.9331L13.7134 61.6412C13.7134 61.6412 14.9988 48.7256 29.1807 48.7256C43.3625 48.7256 43.7449 59.4142 43.7449 61.0981C43.7449 62.7821 43.5505 67.1366 38.9003 71.3979C34.2502 75.6591 27.246 81.8551 27.246 81.8551Z" fill="#D7CCAE"/>
+        <path d="M82.4305 74.494H76.9416V49.6943H65.5107L49.0632 74.1711V82.2759H68.1523V90.1493H76.9416V82.2759H82.4305V74.494ZM58.2768 74.494L67.8631 59.5426H68.1475V74.494H58.2768Z" fill="#D7CCAE"/>
+        <path d="M24.2134 103.642V101.251H25.6136L27.04 103.642H28.309L26.7425 101.071C27.4514 100.839 28.0727 100.247 28.0727 99.2529C28.0727 97.9449 27.2151 97.2462 25.7536 97.2462H23.0757V103.642H24.2134ZM24.2134 100.319V98.1868H25.6223C26.4887 98.1868 26.9263 98.5541 26.9263 99.2529C26.9263 99.9516 26.4887 100.319 25.6223 100.319H24.2134Z" fill="#D7CCAE"/>
+        <path d="M33.8046 103.642V102.702H30.4179V100.91H33.3845V99.9695H30.4179V98.1868H33.7696V97.2462H29.2802V103.642H33.8046Z" fill="#D7CCAE"/>
+        <path d="M34.6033 101.707C34.7171 103.114 35.8635 103.75 37.3512 103.75C38.7339 103.75 39.7753 102.98 39.7753 101.815C39.7753 100.785 39.1627 100.265 38.1388 100.068L36.9312 99.8262C36.2573 99.6918 35.9335 99.5216 35.9335 98.9931C35.9335 98.4287 36.4061 98.0256 37.1587 98.0256C37.9376 98.0256 38.4801 98.3749 38.5589 99.002H39.6528C39.5303 97.8016 38.6377 97.1387 37.1499 97.1387C35.7848 97.1387 34.8046 97.927 34.8046 99.0647C34.8046 100.185 35.5485 100.632 36.4674 100.803L37.6138 101.018C38.3664 101.161 38.6377 101.421 38.6377 101.887C38.6377 102.532 38.0601 102.872 37.3162 102.872C36.5374 102.872 35.8023 102.576 35.7235 101.707H34.6033Z" fill="#D7CCAE"/>
+        <path d="M40.8516 103.642H42.0156V97.2462H40.8516V103.642Z" fill="#D7CCAE"/>
+        <path d="M45.8391 97.2462H43.4326V103.642H45.8391C47.7207 103.642 48.9633 102.37 48.9633 100.444C48.9633 98.5272 47.7207 97.2462 45.8391 97.2462ZM45.8391 98.1868C47.0818 98.1868 47.7732 99.0199 47.7732 100.444C47.7732 101.869 47.0818 102.702 45.8391 102.702H44.5702V98.1868H45.8391Z" fill="#D7CCAE"/>
+        <path d="M54.5545 103.642V102.702H51.1678V100.91H54.1345V99.9695H51.1678V98.1868H54.5195V97.2462H50.0302V103.642H54.5545Z" fill="#D7CCAE"/>
+        <path d="M57.1381 97.2462H55.7817V103.642H56.8931V98.6885H56.9106L60.1223 103.642H61.1987V97.2462H60.096V101.779H60.0785L57.1381 97.2462Z" fill="#D7CCAE"/>
+        <path d="M63.4587 100.435C63.4587 98.9841 64.0888 98.0793 65.2177 98.0793C66.1103 98.0793 66.5216 98.5989 66.6441 99.2529H67.773C67.5543 97.9987 66.7141 97.1387 65.2177 97.1387C63.4674 97.1387 62.2773 98.4645 62.2773 100.435C62.2773 102.424 63.4674 103.75 65.2177 103.75C66.7141 103.75 67.5543 102.881 67.773 101.636H66.6441C66.5216 102.29 66.1103 102.809 65.2177 102.809C64.0888 102.809 63.4587 101.896 63.4587 100.435Z" fill="#D7CCAE"/>
+        <path d="M73.3218 103.642V102.702H69.9351V100.91H72.9017V99.9695H69.9351V98.1868H73.2868V97.2462H68.7974V103.642H73.3218Z" fill="#D7CCAE"/>
+        </svg>
+    </div>
+    <button id="menu-toggle" class="w-[30px] h-[30px] z-30">
+        <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <g id="style=linear">
+            <g id="menu-fries">
+            <path id="vector" d="M3 6H21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            <path id="vector_2" d="M9 12L21 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            <path id="vector_3" d="M3 18H21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            </g>
+            </g>
+            </svg>
+    </button>
+  </div>
+  
+  <div id="mobile-menu"
+  class="fixed top-0 right-0 h-full md:w-[35%] w-[70%] bg-[#fff] backdrop-blur-[15px] text-white transform translate-x-full transition-transform duration-300 ease-in-out z-20 flex flex-col gap-4 px-6 py-10">
+<button id="menu-close" class="text-[#120902] text-3xl absolute top-4 right-4">✕</button>
+<a href="#" class="tobias text-[25px] text-[#120902] hover:underline">Home</a>
+<a href="#" class="tobias text-[25px] text-[#120902] hover:underline">About</a>
+<a href="#" class="tobias text-[25px] text-[#120902] hover:underline">Services</a>
+<a href="#" class="tobias text-[25px] text-[#120902] hover:underline">Contact</a>
+</div>
+
+<!-- Backdrop (Optional) -->
+<div id="menu-backdrop" class="fixed inset-0 bg-[#ffffff79] bg-opacity-50 hidden z-10 backdrop-blur-[10px]"></div>
+  
+
+
+        <div class="hero-sections-container w-full h-screen flex sticky top-0 overflow-x-hidden lg:-mt-[75px] -mt-[77px]">
             <div class="hero-section-1 hero relative w-[100vw] h-screen flex items-center justify-center shrink-0 px-[10px] md:px-[0]">
-                <div class="logo lg:w-[unset] md:w-[80px] w-[70px] absolute top-0 left-[3%]">
+                <div class="logo lg:w-[unset] md:w-[80px] w-[70px] lg:block hidden absolute top-0 left-[3%]">
                     <svg class="lg:w-[unset] lg:h-[unset] w-full h-full" xmlns="http://www.w3.org/2000/svg" width="96" height="123" viewBox="0 0 96 123" fill="none"><script xmlns=""/>
                     <rect width="96" height="123" fill="#D7CCAE"/>
                     <rect x="4.77502" width="86.1" height="123" fill="#77593D"/>
@@ -156,52 +244,193 @@
 
     <main class="w-full md:px-0 px-[10px]">
 
-        <div class="parent w-full flex md:flex-row flex-col md:gap-0 gap-[25px] md:pt-0 md:pb-0 pt-[50px] pb-[50px] relative">
+        <div class="parent w-[var(--box-width)] mx-auto flex md:flex-row flex-col md:gap-0 gap-[25px] md:pt-0 md:pb-0 pt-[50px] pb-[50px] relative">
             <div class="left md:w-[45%] w-full md:h-screen h-fit static md:sticky top-0 flex flex-col md:items-center items-start justify-center">
                 <div class="lines w-full relative lg:pl-[126px] md:pl-[77px] mb-[10px]">
                     <div class="light-line h-[2px] md:w-[150px] w-[85px] bg-zinc-300"></div>
                     <div class="dark-line h-[2px] md:w-[150px] w-[85px] bg-zinc-900 absolute top-0"></div>
                 </div>
       
-                <h1 class="md:text-[6vw] text-[32px] leading-none">Expected <br class="md:block hidden">Outcomes</h1>
+                <h1 class="tobias md:text-[6vw] text-[32px] leading-none">Expected <br class="md:block hidden">Outcomes</h1>
                 <div class="icon h-[75px] w-[75px] bg-zinc-100 hidden lg:flex items-center rounded-full justify-center self-start ml-[160px] mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" viewBox="0 0 36 38" fill="none"><script xmlns=""/>
                         <path d="M15.196 37.0682L15.7074 23.0057L3.81818 30.5483L0.75 25.179L13.2784 18.6591L0.75 12.1392L3.81818 6.76989L15.7074 14.3125L15.196 0.25H21.3324L20.821 14.3125L32.7102 6.76989L35.7784 12.1392L23.25 18.6591L35.7784 25.179L32.7102 30.5483L20.821 23.0057L21.3324 37.0682H15.196Z" fill="black"/>
                         </svg>
                 </div>
             </div>
-            <div class="right md:w-[55%] w-full flex flex-col md:gap-[35px] gap-[10px] relative lg:pt-[100vh] md:pt-[50vh] pt-0 lg:pb-[30vh] md:pb-[20vh] pb-[0px] lg:pl-[185px] md:pl-[50px]">
-                <!-- <div class="overlay-top fixed top-0 right-0 z-50 w-[inherit] h-[35%] bg-gradient-to-b from-white to-transparent"></div>
-                <div class="overlay-bottom fixed bottom-0 right-0 z-50 w-[inherit] h-[35%] bg-gradient-to-t from-white to-transparent"></div> -->
+            <div class="right md:w-[55%] w-full flex flex-col md:gap-[35px] gap-[10px] relative lg:pt-[100vh] md:pt-[50vh] pt-0 lg:pb-[25vh] md:pb-[17vh] pb-[0px] lg:pl-[185px] md:pl-[50px]">
                 <div class="text-group md:w-[85%] w-full flex flex-col justify-center bg-zinc-50 p-[25px] rounded-[16px]">
-                    <h3 class="md:text-[2.5vw] text-[22px]">Growth and ROI</h3>
-                    <p class="lg:text-[25px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
+                    <h3 class="untitled md:text-[2.2vw] text-[22px]">Growth and ROI</h3>
+                    <p class="untitled lg:text-[20px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
                 </div>
                 
                 <div class="text-group md:w-[85%] w-full flex flex-col justify-center bg-zinc-50 p-[25px] rounded-[16px]">
-                    <h3 class="md:text-[2.5vw] text-[22px]">Growth and ROI</h3>
-                    <p class="lg:text-[25px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
+                    <h3 class="untitled md:text-[2.2vw] text-[22px]">Growth and ROI</h3>
+                    <p class="untitled lg:text-[20px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
                 </div>
 
                 <div class="text-group md:w-[85%] w-full flex flex-col justify-center bg-zinc-50 p-[25px] rounded-[16px]">
-                    <h3 class="md:text-[2.5vw] text-[22px]">Growth and ROI</h3>
-                    <p class="lg:text-[25px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
+                    <h3 class="untitled md:text-[2.2vw] text-[22px]">Growth and ROI</h3>
+                    <p class="untitled lg:text-[20px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
                 </div>
 
                 <div class="text-group md:w-[85%] w-full flex flex-col justify-center bg-zinc-50 p-[25px] rounded-[16px]">
-                    <h3 class="md:text-[2.5vw] text-[22px]">Growth and ROI</h3>
-                    <p class="lg:text-[25px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
+                    <h3 class="untitled md:text-[2.2vw] text-[22px]">Growth and ROI</h3>
+                    <p class="untitled lg:text-[20px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
                 </div>
 
                 <div class="text-group md:w-[85%] w-full flex flex-col justify-center bg-zinc-50 p-[25px] rounded-[16px]">
-                    <h3 class="md:text-[2.5vw] text-[22px]">Growth and ROI</h3>
-                    <p class="lg:text-[25px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
+                    <h3 class="untitled md:text-[2.2vw] text-[22px]">Growth and ROI</h3>
+                    <p class="untitled lg:text-[20px] md:text-[18px] text-[15px] w-[100%] text-zinc-800">Expect a team that looks at problems holistically. A team that designs solutions directly contributing to your revenue growth and business success - not just pretty pictures.</p>
                 </div>
 
             </div>
         </div>
 
     </main>
+
+    <div class="container mx-auto px-4 md:pb-[100px] pb-[60px] w-[var(--box-width)]">
+        <div class="text-center mb-[35px]">
+          <h1 class="tobias lg:text-[60px] md:text-[6vw] text-[32px] font-[400] leading-[1.2em]">
+            All the intel, <span class="untitled italic text-[#C88E57]">none</span><br>
+            of the tabs.
+          </h1>
+          <p class="untitled lg:text-[23px] md:text-[18px] text-[16px] text-gray-600 lg:w-1/2 md:w-[65%] w-[98%] mx-auto lg:mt-6 mt-2">
+            First Touch brings real-time insights and signals from 
+            across the web (all in one place).
+          </p>
+        </div>
+        
+<!-- First Marquee Row -->
+<div class="marquee-container overflow-hidden" id="container1">
+    <div class="marquee-track flex gap-[22px]" id="marquee1"></div>
+  </div>
+  
+  <!-- Second Marquee Row -->
+  <div class="marquee-container mt-[25px] overflow-hidden" id="container2">
+    <div class="marquee-track flex gap-[22px]" id="marquee2"></div>
+  </div>
+
+    </div>
+
+    <div class="work-parent w-full flex flex-col lg:mb-[200px] mb-[100px] items-center lg:px-0 px-[10px] relative">
+        <div class="w-[var(--box-width)]">
+
+            <div class="work-head w-full flex items-center justify-between lg:mb-[15px]">
+                <h2 class="tobias md:text-[6vw] text-[32px] leading-none">Our Work</h2>
+                <button data-tilt class="change-cursor w-[80px] h-[80px] md:w-[115px] md:h-[115px] relative bg-[#C88E57] rounded-full uppercase text-white text-[10px] md:text-[11px]">
+                    <span class="relative z-[5]">View More</span
+                </button>
+            </div>
+
+            <div class="work-main md:h-[400vh] h-[350vh] w-full flex flex-col items-center md:gap-[65px] gap-[35px] sticky lg:top-[75px] top-[40px]">
+
+                <div class="work-card w-full md:h-[70vh] h-[60vh] rounded-[16px] bg-[url(/Assets/Media/work-1.webp)] bg-cover bg-center overflow-hidden">
+                    <a href="#" class="work-content w-full h-full p-[35px] flex flex-col items-start justify-end md:gap-[15px] gap-[10px]">
+                        <h1 class="tobias text-white lg:text-[65px] md:text-[55px] text-[32px] leading-[1em]">Lounge Area</h1>
+                        <p class="untitled text-white lg:text-[16px] md:text-[15px] text-[14px] lg:w-[45%] md:w-[65%] w-[100%] leading-[1.2em]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    </a>
+                </div>
+                
+                <div class="work-card w-full md:h-[70vh] h-[60vh] rounded-[16px] bg-[url(/Assets/Media/work-2.webp)] bg-cover bg-center overflow-hidden">
+                    <a href="#" class="work-content w-full h-full p-[35px] flex flex-col items-start justify-end md:gap-[15px] gap-[10px]">
+                        <h1 class="tobias text-white lg:text-[65px] md:text-[55px] text-[32px] leading-[1em]">Lounge Area</h1>
+                        <p class="untitled text-white lg:text-[16px] md:text-[15px] text-[14px] lg:w-[45%] md:w-[65%] w-[100%] leading-[1.2em]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    </a>
+                </div>
+
+                <div class="work-card w-full md:h-[70vh] h-[60vh] rounded-[16px] bg-[url(/Assets/Media/work-3.webp)] bg-cover bg-center overflow-hidden">
+                    <a href="#" class="work-content w-full h-full p-[35px] flex flex-col items-start justify-end md:gap-[15px] gap-[10px]">
+                        <h1 class="tobias text-white lg:text-[65px] md:text-[55px] text-[32px] leading-[1em]">Lounge Area</h1>
+                        <p class="untitled text-white lg:text-[16px] md:text-[15px] text-[14px] lg:w-[45%] md:w-[65%] w-[100%] leading-[1.2em]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    </a>
+                </div>
+
+                <div class="work-card w-full md:h-[70vh] h-[60vh] rounded-[16px] bg-[url(/Assets/Media/work-4.webp)] bg-cover bg-center overflow-hidden">
+                    <a href="#" class="work-content w-full h-full p-[35px] flex flex-col items-start justify-end md:gap-[15px] gap-[10px]">
+                        <h1 class="tobias text-white lg:text-[65px] md:text-[55px] text-[32px] leading-[1em]">Lounge Area</h1>
+                        <p class="untitled text-white lg:text-[16px] md:text-[15px] text-[14px] lg:w-[45%] md:w-[65%] w-[100%] leading-[1.2em]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="details-section w-full flex flex-col items-center lg:px-0 px-[10px] lg:mb-0 md:mb-[75px] mb-[50px]">
+        <div class="details-head w-[var(--box-width)]">
+            <h2 class="tobias lg:text-[60px] md:text-[50px] text-[32px] lg:w-[40%] w-[100%] font-medium leading-[1.2em]">Clean, Conscious,
+                Performance</h2>
+                <div class="lg:w-[45%] w-[90%] flex items-start justify-between md:flex-row flex-col mt-[10px]">
+                    <p class="untitled text-[#4a5565] lg:text-[12px] text-[13px] md:w-[50%] w-[100%] leading-[1.2em] md:mt-[10px]">Unreservedly honest products that truly work, be kind to skin and the planet – no exceptions!</p>
+                    <h3 class="untitled text-[#C88E57] lg:text-[75px] md:text-[65px] text-[50px] font-medium leading-[1em] tracking-tighter italic border-b-[2px] border-solid">skincare.</h3>
+                </div>
+        </div>
+        <div class="details-main w-[var(--box-width)] flex justify-between lg:flex-row flex-col lg:gap-0 md:gap-[31px] gap-[15px] relative lg:mt-[300px] mt-[35px]">
+
+            <div class="details-side lg:w-[45%] w-[100%] flex flex-col items-center gap-[125px] z-10">
+                <div class="detail-cards w-full flex lg:flex-col md:flex-row flex-col lg:gap-0 md:gap-[31px] gap-[15px]">
+
+                    <div class="detail-card lg:w-[48%] md:w-[48%] w-[100%] flex flex-col items-center pt-[45px] pb-[34px] px-[28px] bg-[#f5f5f5] rounded-[14px] lg:mb-[-40px] self-end">
+                        <div class="detail-icon w-[73px] h-[73px] bg-[#fff] p-[7px] flex items-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><script xmlns=""/><path d="M27.41,47.91c.09-8.06,5.51-15,13.31-16.96,9.91-2.49,19.86,4.08,21.48,14.19,.63,3.91,0,7.63-1.89,11.11-.22,.41-.15,.62,.15,.92,2.99,2.97,5.98,5.96,8.96,8.95,1.72,1.73,1.9,4.27,.46,6.04-1.72,2.12-4.71,2.25-6.7,.28-2.97-2.95-5.93-5.91-8.87-8.89-.4-.4-.66-.45-1.17-.18-10.44,5.53-23.24-.66-25.38-12.28-.19-1.04-.23-2.12-.34-3.18Zm1.78,0c-.02,8.67,7.06,15.75,15.75,15.77,8.61,.02,15.75-7.09,15.77-15.7,.02-8.7-7.04-15.8-15.7-15.82-8.72-.02-15.8,7.03-15.82,15.75Zm26.17,14.26c2.43,2.43,4.92,4.92,7.41,7.41,.62,.62,1.21,1.27,1.87,1.84,.85,.74,1.85,.89,2.89,.42,1.73-.77,2.14-3.02,.79-4.39-3.01-3.03-6.04-6.05-9.06-9.07-.05-.05-.11-.08-.06-.05l-3.83,3.83Z"/><path d="M33.36,47.89c.03-3.05,1.08-5.7,3.16-7.93,.18-.19,.43-.37,.68-.45,.37-.12,.69,.05,.89,.38,.22,.35,.17,.7-.09,1.02-.4,.49-.84,.94-1.19,1.46-2.63,3.82-2.22,8.93,.96,12.31,.08,.09,.17,.18,.25,.27,.31,.41,.29,.86-.05,1.18-.33,.32-.89,.35-1.22-.03-.55-.63-1.11-1.26-1.57-1.96-1.23-1.89-1.82-3.99-1.81-6.25Z"/></svg>
+                        </div>
+                        <div class="detail-content w-full flex flex-col items-center">
+                            <h6 class="untitled text-[#3b3b3b] lg:text-[14px] md:text-[18px] text-[22px] font-semibold leading-[1.1em] lg:w-[50%] w-[100%] text-center md:my-[22px] my-[15px]">Radical Transparency</h6>
+                            <p class="untitled text-[#3b3b3b] md:text-[11px] text-[14px] text-center">No black boxes, nothing to hide, we disclose our full formulas, so you will never have to guess what's in it and how much.</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card lg:w-[48%] md:w-[48%] w-[100%] flex flex-col items-center pt-[45px] pb-[34px] px-[28px] bg-[#f5f5f5] rounded-[14px]">
+                        <div class="detail-icon w-[73px] h-[73px] bg-[#fff] p-[7px] flex items-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><script xmlns=""/><path d="M27.41,47.91c.09-8.06,5.51-15,13.31-16.96,9.91-2.49,19.86,4.08,21.48,14.19,.63,3.91,0,7.63-1.89,11.11-.22,.41-.15,.62,.15,.92,2.99,2.97,5.98,5.96,8.96,8.95,1.72,1.73,1.9,4.27,.46,6.04-1.72,2.12-4.71,2.25-6.7,.28-2.97-2.95-5.93-5.91-8.87-8.89-.4-.4-.66-.45-1.17-.18-10.44,5.53-23.24-.66-25.38-12.28-.19-1.04-.23-2.12-.34-3.18Zm1.78,0c-.02,8.67,7.06,15.75,15.75,15.77,8.61,.02,15.75-7.09,15.77-15.7,.02-8.7-7.04-15.8-15.7-15.82-8.72-.02-15.8,7.03-15.82,15.75Zm26.17,14.26c2.43,2.43,4.92,4.92,7.41,7.41,.62,.62,1.21,1.27,1.87,1.84,.85,.74,1.85,.89,2.89,.42,1.73-.77,2.14-3.02,.79-4.39-3.01-3.03-6.04-6.05-9.06-9.07-.05-.05-.11-.08-.06-.05l-3.83,3.83Z"/><path d="M33.36,47.89c.03-3.05,1.08-5.7,3.16-7.93,.18-.19,.43-.37,.68-.45,.37-.12,.69,.05,.89,.38,.22,.35,.17,.7-.09,1.02-.4,.49-.84,.94-1.19,1.46-2.63,3.82-2.22,8.93,.96,12.31,.08,.09,.17,.18,.25,.27,.31,.41,.29,.86-.05,1.18-.33,.32-.89,.35-1.22-.03-.55-.63-1.11-1.26-1.57-1.96-1.23-1.89-1.82-3.99-1.81-6.25Z"/></svg>
+                        </div>
+                        <div class="detail-content w-full flex flex-col items-center">
+                            <h6 class="untitled text-[#3b3b3b] lg:text-[14px] md:text-[18px] text-[22px] font-semibold leading-[1.1em] lg:w-[50%] w-[100%] text-center md:my-[22px] my-[15px]">Radical Transparency</h6>
+                            <p class="untitled text-[#3b3b3b] md:text-[11px] text-[14px] text-center">No black boxes, nothing to hide, we disclose our full formulas, so you will never have to guess what's in it and how much.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <img class="w-[195px] mr-[-115px] lg:block hidden" src="/Assets/Media/details-img.png">
+            </div>
+
+            <div class="detail-mask-img-container w-[100%] h-[750px] bg-amber-300 lg:absolute top-0 left-0 lg:order-none -order-3 lg:flex hidden">
+                <img class="w-[100%] h-[100%] object-cover object-center" src="/Assets/Media/work-2.webp">
+            </div>
+
+            <div class="details-side lg:w-[45%] w-[100%] flex flex-col items-center gap-[75px] justify-end z-10">
+                <img class="w-[195px] ml-[-115px] lg:block hidden" src="/Assets/Media/details-img-2.png">
+                <div class="detail-cards w-full flex lg:flex-col md:flex-row flex-col lg:gap-0 md:gap-[31px] gap-[15px]">
+
+                    <div class="detail-card lg:w-[48%] md:w-[48%] w-[100%] flex flex-col items-center pt-[45px] pb-[34px] px-[28px] bg-[#f5f5f5] rounded-[14px] lg:mb-[-40px] self-end">
+                        <div class="detail-icon w-[73px] h-[73px] bg-[#fff] p-[7px] flex items-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><script xmlns=""/><path d="M27.41,47.91c.09-8.06,5.51-15,13.31-16.96,9.91-2.49,19.86,4.08,21.48,14.19,.63,3.91,0,7.63-1.89,11.11-.22,.41-.15,.62,.15,.92,2.99,2.97,5.98,5.96,8.96,8.95,1.72,1.73,1.9,4.27,.46,6.04-1.72,2.12-4.71,2.25-6.7,.28-2.97-2.95-5.93-5.91-8.87-8.89-.4-.4-.66-.45-1.17-.18-10.44,5.53-23.24-.66-25.38-12.28-.19-1.04-.23-2.12-.34-3.18Zm1.78,0c-.02,8.67,7.06,15.75,15.75,15.77,8.61,.02,15.75-7.09,15.77-15.7,.02-8.7-7.04-15.8-15.7-15.82-8.72-.02-15.8,7.03-15.82,15.75Zm26.17,14.26c2.43,2.43,4.92,4.92,7.41,7.41,.62,.62,1.21,1.27,1.87,1.84,.85,.74,1.85,.89,2.89,.42,1.73-.77,2.14-3.02,.79-4.39-3.01-3.03-6.04-6.05-9.06-9.07-.05-.05-.11-.08-.06-.05l-3.83,3.83Z"/><path d="M33.36,47.89c.03-3.05,1.08-5.7,3.16-7.93,.18-.19,.43-.37,.68-.45,.37-.12,.69,.05,.89,.38,.22,.35,.17,.7-.09,1.02-.4,.49-.84,.94-1.19,1.46-2.63,3.82-2.22,8.93,.96,12.31,.08,.09,.17,.18,.25,.27,.31,.41,.29,.86-.05,1.18-.33,.32-.89,.35-1.22-.03-.55-.63-1.11-1.26-1.57-1.96-1.23-1.89-1.82-3.99-1.81-6.25Z"/></svg>
+                        </div>
+                        <div class="detail-content w-full flex flex-col items-center">
+                            <h6 class="untitled text-[#3b3b3b] lg:text-[14px] md:text-[18px] text-[22px] font-semibold leading-[1.1em] lg:w-[50%] w-[100%] text-center md:my-[22px] my-[15px]">Radical Transparency</h6>
+                            <p class="untitled text-[#3b3b3b] md:text-[11px] text-[14px] text-center">No black boxes, nothing to hide, we disclose our full formulas, so you will never have to guess what's in it and how much.</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-card lg:w-[48%] md:w-[48%] w-[100%] flex flex-col items-center pt-[45px] pb-[34px] px-[28px] bg-[#f5f5f5] rounded-[14px]">
+                        <div class="detail-icon w-[73px] h-[73px] bg-[#fff] p-[7px] flex items-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><script xmlns=""/><path d="M27.41,47.91c.09-8.06,5.51-15,13.31-16.96,9.91-2.49,19.86,4.08,21.48,14.19,.63,3.91,0,7.63-1.89,11.11-.22,.41-.15,.62,.15,.92,2.99,2.97,5.98,5.96,8.96,8.95,1.72,1.73,1.9,4.27,.46,6.04-1.72,2.12-4.71,2.25-6.7,.28-2.97-2.95-5.93-5.91-8.87-8.89-.4-.4-.66-.45-1.17-.18-10.44,5.53-23.24-.66-25.38-12.28-.19-1.04-.23-2.12-.34-3.18Zm1.78,0c-.02,8.67,7.06,15.75,15.75,15.77,8.61,.02,15.75-7.09,15.77-15.7,.02-8.7-7.04-15.8-15.7-15.82-8.72-.02-15.8,7.03-15.82,15.75Zm26.17,14.26c2.43,2.43,4.92,4.92,7.41,7.41,.62,.62,1.21,1.27,1.87,1.84,.85,.74,1.85,.89,2.89,.42,1.73-.77,2.14-3.02,.79-4.39-3.01-3.03-6.04-6.05-9.06-9.07-.05-.05-.11-.08-.06-.05l-3.83,3.83Z"/><path d="M33.36,47.89c.03-3.05,1.08-5.7,3.16-7.93,.18-.19,.43-.37,.68-.45,.37-.12,.69,.05,.89,.38,.22,.35,.17,.7-.09,1.02-.4,.49-.84,.94-1.19,1.46-2.63,3.82-2.22,8.93,.96,12.31,.08,.09,.17,.18,.25,.27,.31,.41,.29,.86-.05,1.18-.33,.32-.89,.35-1.22-.03-.55-.63-1.11-1.26-1.57-1.96-1.23-1.89-1.82-3.99-1.81-6.25Z"/></svg>
+                        </div>
+                        <div class="detail-content w-full flex flex-col items-center">
+                            <h6 class="untitled text-[#3b3b3b] lg:text-[14px] md:text-[18px] text-[22px] font-semibold leading-[1.1em] lg:w-[50%] w-[100%] text-center md:my-[22px] my-[15px]">Radical Transparency</h6>
+                            <p class="untitled text-[#3b3b3b] md:text-[11px] text-[14px] text-center">No black boxes, nothing to hide, we disclose our full formulas, so you will never have to guess what's in it and how much.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
 
     <footer class="w-full flex flex-col items-center pt-[75px] pb-[32px] lg:px-0 px-[10px] relative">
         <div class="footer-overlay w-full h-full absolute top-0 left-0 bg-[#120902] opacity-[0.3]"></div>

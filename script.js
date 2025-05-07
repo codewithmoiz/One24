@@ -209,3 +209,174 @@ footerButton.addEventListener('mouseleave', () => {
     })
 })
 
+
+
+
+
+const marqueeData = [
+    {
+        text: "Hiring updates",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/668ba8d1139c87fb487aa776_users.svg"
+    },
+    {
+        text: "Recent news",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/668ba2b7d77f6c8b23cc4fa0_book-open.svg"
+    },
+    {
+        text: "Technology spend",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/669e9890776f6105e24abab0_cpu.svg"
+    },
+    {
+        text: "Prospect overview",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/668ba8f755cfbdd7d084ae38_folder.svg"
+    },
+    {
+        text: "Podcasts",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/669e9916c6fc5e08814a5dc5_headphones.svg"
+    },
+    {
+        text: "Industry insights",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/669e9938776f6105e24b5ef7_activity.svg"
+    },
+    {
+        text: "Social posts",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/668ba8e57900bc7490db7dcc_monitor.svg"
+    },
+    {
+        text: "Funding data",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/669e980495c687caa44329a3_database.svg"
+    },
+    {
+        text: "Prospect challenges",
+        image: "https://cdn.prod.website-files.com/6686cf67c6204e07ccbbd28f/669e98e1460020d063559918_cloud-lightning.svg"
+    }
+
+];
+
+
+// Marquee Section
+document.addEventListener('DOMContentLoaded', () => {
+    const createIconBox = (data) => {
+      const div = document.createElement('div');
+      div.className = "change-cursor icon-box flex items-center md:gap-[16px] gap-[10px] shrink-0 bg-[#ede8dc] py-[8px] px-[10px] rounded-[16px]";
+      div.innerHTML = `
+        <span class="flex items-center justify-center bg-white md:w-[42px] w-[40px] md:h-[42px] h-[40px] rounded-[13px]">
+          <img class="w-[22px]" src="${data.image}" />
+        </span>
+        <h6 class="untitled md:text-[20px] text-[20px] text-[#6c6758] font-medium">${data.text}</h6>
+      `;
+      return div;
+    };
+  
+    const setupMarquee = (trackId, speed = 50, reverse = false) => {
+        const track = document.getElementById(trackId);
+        track.innerHTML = '';
+      
+        for (let i = 0; i < 2; i++) {
+          marqueeData.forEach(data => {
+            track.appendChild(createIconBox(data));
+          });
+        }
+      
+        const totalWidth = track.scrollWidth / 2;
+      
+        gsap.set(track, { x: reverse ? -totalWidth : 0 });
+      
+        gsap.to(track, {
+          x: reverse ? 0 : -totalWidth,
+          duration: (totalWidth / speed) * 2,
+          ease: "none",
+          repeat: -1,
+          modifiers: {
+            x: gsap.utils.unitize(x => parseFloat(x) % totalWidth)
+          }
+        });
+      };
+      
+  
+    setupMarquee('marquee1', 50, false);
+    setupMarquee('marquee2', 50, true);
+  });
+  
+
+
+
+// Work Section
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".work-card");
+    cards.forEach((card, i) => {
+      card.style.setProperty("--i", i);
+    });
+
+  });
+
+
+
+//   Details Section
+document.addEventListener('DOMContentLoaded', () => {
+
+    if(window.matchMedia('(min-width: 1024px)').matches){
+
+        gsap.from('.details-section .details-head h3', {
+            x: "25%",
+            scrollTrigger: {
+                trigger: ".details-section",
+                start: "20% bottom",
+                end: "65% center",
+                scrub: true,
+                // markers: true
+            }
+        })
+        gsap.to('.details-section .details-side', {
+            y: "-27.5%",
+            scrollTrigger: {
+                trigger: ".details-section",
+                start: "20% bottom",
+                end: "65% center",
+                scrub: true,
+                // markers: true
+            }
+        })
+    
+        gsap.to('.details-section .detail-mask-img-container img', {
+            height: "115%",
+            y: "7%",
+            scrollTrigger: {
+                trigger: ".detail-mask-img-container",
+                start: "20% bottom",
+                end: "65% center",
+                scrub: 2,
+                // markers: true
+            }
+        });
+
+    }
+    
+
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const toggleBtn = document.getElementById('menu-toggle');
+    const closeBtn = document.getElementById('menu-close');
+    const drawer = document.getElementById('mobile-menu');
+    const backdrop = document.getElementById('menu-backdrop');
+  
+    toggleBtn.addEventListener('click', () => {
+      drawer.classList.remove('translate-x-full');
+      backdrop.classList.remove('hidden');
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      drawer.classList.add('translate-x-full');
+      backdrop.classList.add('hidden');
+    });
+  
+    backdrop.addEventListener('click', () => {
+      drawer.classList.add('translate-x-full');
+      backdrop.classList.add('hidden');
+    });
+
+})
